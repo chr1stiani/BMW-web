@@ -10,6 +10,9 @@ font-family: 'Wix Madefor Text', sans-serif; * hlavní dopňkový font
 :root {
     --white-colour: rgb(241, 241, 241);
     --button-colour: rgba(0, 0, 0, 0.8);
+    --light-blue-colour: rgb(1,174,240);
+    --dark-blue-colour: rgb(14,116,188);
+    --red-colour: rgb(242,12,0);
 }
 
 
@@ -67,17 +70,66 @@ font-family: 'Wix Madefor Text', sans-serif; * hlavní dopňkový font
     align-items: center;
     font-size: 25px;
     padding-left: 80px;
+    cursor: pointer;
+    position: relative;
+}
+/* Nastavení barevných proužků pod ikonami */
+.user-icon,
+.cart-icon,
+.search-icon {
+    position: relative;
+}
+.user-icon::after {
+    content: "";
+    position: absolute;
+    bottom: -24px;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: var(--light-blue-colour);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.cart-icon::after {
+    content: "";
+    position: absolute;
+    bottom: -24px;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark-blue-colour);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.search-icon::after {
+    content: "";
+    position: absolute;
+    bottom: -24px;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: var(--red-colour);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.user-icon:hover::after,
+.cart-icon:hover::after,
+.search-icon:hover::after {
+    opacity: 1;
 }
 
-.user-icon {
+.menu-ikony a {
+    color: var(--white-colour);
+    text-decoration: none;
+}
+
+.user-icon, .cart-icon, .search-icon {
     padding-right: 40px;
 }
-.cart-icon {
-    padding-right: 40px;
-}
-.search-icon {
-    padding-right: 40px;
-}
+
 
 /* ------ MAIN ------ */
 .divmain {
@@ -155,9 +207,9 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(90deg, #01AEF0, #0E74BC, #F20C00, #0E74BC, #01AEF0);
+    background: linear-gradient(90deg, #01AEF0, #0E74BC, #F20C00, #0E74BC);
     z-index: 1;
-    animation: glow 15s linear infinite;
+    animation: glow 10s linear infinite;
     background-size: 800%;
 }
 
