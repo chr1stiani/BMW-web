@@ -9,30 +9,51 @@ font-family: 'Wix Madefor Text', sans-serif; * hlavní dopňkový font
 
 :root {
     --white-colour: rgb(241, 241, 241);
+    --button-colour: rgba(0, 0, 0, 0.8);
 }
 
+
+/* ------ NAVIGACE ------ */
 .divnav {
-    display: flex;
-    padding-top: 30px;
-    padding-left: 50px;
+    grid-template-columns: repeat(12, 0.5fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    display: grid;
+    grid-template-areas: 
+    ". . . . . . . . . . . ."
+    ". logo mt mt mt mt mt mt . mi mi ."
+    ". line line line line line line line line line line ."
+    ;
 }
 
+/* Definování částí v gridu */
 .logo {
+    grid-area: logo;
     width: 160px;
 }
 
 .menu-text {
-    padding-left: 80px;
+    grid-area: mt;
 }
 
+.menu-ikony {
+    grid-area: mi;
+}
+
+.line {
+    grid-area: line;
+    border-top: 2px solid white;
+}
+
+/* Definování stylů prvků */
 .menu-text li {
     font-family: 'Wix Madefor Text', sans-serif;
     text-decoration: none;
     display: inline-block;
     color: var(--white-colour);
-    font-size: 35px;
-    padding-left: 20px;
+    font-size: 30px;
     padding-right: 20px;
+    padding-left: 20px;
+    align-items: center;
 }
 
 .menu-text a {
@@ -45,7 +66,7 @@ font-family: 'Wix Madefor Text', sans-serif; * hlavní dopňkový font
     color: var(--white-colour);
     align-items: center;
     font-size: 25px;
-    margin-left: auto;
+    padding-left: 80px;
 }
 
 .user-icon {
@@ -55,5 +76,157 @@ font-family: 'Wix Madefor Text', sans-serif; * hlavní dopňkový font
     padding-right: 40px;
 }
 .search-icon {
-    padding-right: 120px;
+    padding-right: 40px;
+}
+
+/* ------ MAIN ------ */
+.divmain {
+    grid-template-columns: repeat(12, 0.5fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    display: grid;
+    grid-template-areas: 
+    ". mt mt mt mt . . . . . . ."
+    ". st st st st . . . . . . ."
+    ". . . . . . . . . . . ."
+    ;
+}
+
+/* Definování částí v gridu */ 
+.maintext {
+    grid-area: mt;
+}
+
+.secondtext {
+    grid-area: st;
+}
+
+/* Definování stylů prvků */
+.maintext {
+    font-family: 'Wix Madefor Text', sans-serif;
+    color: var(--white-colour);
+    font-size: 100px;
+    align-self: start !important;
+    padding-top: 20px;
+    padding-left: 0px;
+}
+
+b {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.secondtext {
+    font-family: 'Wix Madefor Text', sans-serif;
+    color: var(--white-colour);
+    align-self: start;
+    font-size: 23px;
+    padding-top: 20px;
+}
+
+/* ------ BUTTON ------ */
+.divbutton {
+    grid-template-columns: repeat(12, 0.5fr);
+    grid-template-rows: repeat(2, 0.5fr);
+    display: grid;
+    grid-template-areas: 
+    ". bt bt bt . . . . . . . ."
+    ". bt bt bt . . . . . . . ."
+    ;
+}
+/* Definování částí v gridu */
+.button {
+    grid-area: bt;
+    padding-top: 30px;
+}
+
+/* Definování stylů prvků */
+button {
+    height: 90px;
+    width: 300px;
+    border-radius: 15px;
+    border: none;
+    outline: 1px solid var(--white-colour);
+    background: var(--button-colour);
+    color: var(--white-colour);
+    font-size: 35px;
+    font-family: 'Wix Madefor Text', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #01AEF0, #0E74BC, #F20C00, #0E74BC, #01AEF0);
+    z-index: 1;
+    animation: glow 15s linear infinite;
+    background-size: 800%;
+}
+
+button:before {
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+button:hover:before {
+    opacity: 1;
+    z-index: -1;
+}
+
+@keyframes glow {
+    0%{
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100%{
+        background-position: 200%;
+    }
+}
+
+/* ------ POPIS ------ */
+.divspecs {
+    grid-template-columns: repeat(12, 0.5fr);
+    grid-template-rows: repeat(8, 1fr);
+    display: grid;
+    grid-template-areas:
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". c c v v p p . . . . ."
+    ". c c v v p p . . . . ."
+    ". . . . . . . . . . . ."
+    ;
+}
+
+.cena {
+    grid-area: c;
+}
+.vykon {
+    grid-area: v;
+}
+.pohon {
+    grid-area: p;
+}
+
+/* Designování stylů prvků */
+.divspecs {
+    font-size: 35px;
+    color: var(--white-colour);
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+c {
+    font-size: 23px;
+    font-family: 'Wix Madefor Text', sans-serif;
+
 }
