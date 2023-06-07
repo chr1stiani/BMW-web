@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Comfortaa:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;1,300&family=Wix+Madefor+Text:wght@400;500;600&display=swap');
+/*
+font-family: 'Archivo Black', sans-serif; * hlavní nadpisový font
+font-family: 'Comfortaa', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Wix Madefor Text', sans-serif; * hlavní dopňkový font
+*/
+* {box-sizing: border-box;}
+
+:root {
+    --white-colour: rgb(241, 241, 241);
+}
+
+.divnav {
+    display: flex;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.logo {
+    width: 160px;
+}
+
+.menu-text {
+    padding-left: 80px;
+}
+
+.menu-text li {
+    font-family: 'Wix Madefor Text', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    color: var(--white-colour);
+    font-size: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.menu-text a {
+    text-decoration: none;
+    color: var(--white-colour);
+}
+
+.menu-ikony {
+    display: flex;
+    color: var(--white-colour);
+    align-items: center;
+    font-size: 25px;
+    margin-left: auto;
+}
+
+.user-icon {
+    padding-right: 40px;
+}
+.cart-icon {
+    padding-right: 40px;
+}
+.search-icon {
+    padding-right: 120px;
+}
