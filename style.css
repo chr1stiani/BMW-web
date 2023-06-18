@@ -15,6 +15,77 @@ font-family: 'Wix Madefor Text', sans-serif; * hlavní dopňkový font
     --red-colour: rgb(242,12,0);
 }
 
+/* FADE EFEKT */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    z-index: 9999;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
+
+  .mainfont {
+    font-family: 'Archivo Black', sans-serif !important;
+    font-size: 150px;
+  }
+  
+  .smol {
+    font-size: 20px;
+  }
+
+  .uvod1 {
+    position: relative;
+    font-family: 'Wix Madefor Text', sans-serif;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .text-warning {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+  }
+  
+  .text-warning p {
+    margin: 10px 0;
+  }
+  
+  .main {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .author-image {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    top: 119%;
+  }
+  
+
 
 /* ------ NAVIGACE ------ */
 .divnav {
@@ -282,3 +353,4 @@ c {
     font-family: 'Wix Madefor Text', sans-serif;
 
 }
+
