@@ -6,17 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMW XM</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./scripts.js">
+    <script src="./scripts.js"></script>
     <script src="https://kit.fontawesome.com/e2e83b1a12.js" crossorigin="anonymous"></script>
 </head>
 <style>
-    body { 
+    .body2 { 
         background-image: url("pics/background.png");
         background-repeat: no-repeat;
         background-size: 100%;
         }
-</style> <!--Později nahrát obrázek na server a přepsat tento řádek do css, pro možnost stylování-->
+</style>
 <body>
+    <div class="overlay">
+      <div class="content">
+        <div class="uvod1">
+            <div class="image-container">
+              <img src="./pics/bmw-logo.png" alt="">
+              <div class="text-warning">
+                <p>UPOZORNĚNÍ </p>
+                <p class="smol">Stránka je ve velmi brzkém stádiu vývoje, omluvte prosím  její nedostatky. Děkujeme</p>
+                <div class="main">
+                    <p class="mainfont">BMW</p>
+                    <p>Webová stránka značky BMW - REMAKE</p>
+                </div>
+                <p class="text1">Vytvořil:</p>
+                <img src="./pics/autor.png" alt="" class="author-image">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>  
+<body class="body2">
     <nav>
         <div class="divnav">
                 <div class="logo">
@@ -25,15 +45,15 @@
                     </a>
                 </div>
                 <ul class="menu-text">
-                    <li><a href="#modely">Modely</a></li>
-                    <li><a href="#konfigurator">Konfigurátor</a></li>
-                    <li><a href="#novinky">Novinky</a></li>
+                    <li><a href="./unfinished.html">Modely</a></li>
+                    <li><a href="./unfinished.html">Konfigurátor</a></li>
+                    <li><a href="./unfinished.html">Novinky</a></li>
                 </ul>
                 <div class="line"></div>
                 <div class="menu-ikony">
-                    <div class="user-icon"><a href="#user"><i class="fa-solid fa-user"></i></a></div>
-                    <div class="cart-icon"><a href="#cart"><i class="fa-solid fa-cart-shopping"></i></a></div>
-                    <div class="search-icon"><a href="#search"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                    <div class="user-icon"><a href="./unfinished.html"><i class="fa-solid fa-user"></i></a></div>
+                    <div class="cart-icon"><a href="./unfinished.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
+                    <div class="search-icon"><a href="./unfinished.html"><i class="fa-solid fa-magnifying-glass"></i></a></div>
             </div>
         </div>   
     </nav>
@@ -48,9 +68,12 @@
         </div>
         <div class="divbutton">
             <div class="button">
-                <button> <span>Konfigurátor</span> </button>
+                <button onclick="window.location.href = './unfinished.html'"> 
+                    <span>Konfigurátor</span> 
+                </button>
             </div>
         </div>
+                </div>
         <div class="divspecs">
             <div class="cena">4 229 400 Kč <br> <c>Cena vč. DPH</c> </div>
             <div class="vykon">Až 748 k <br> <c>Výkon</c> </div>
